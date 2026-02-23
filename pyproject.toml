@@ -1,6 +1,6 @@
 [project]
 name = "sleepon-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "MCP server for Sleepon sleep tracker – provides sleep data analysis tools for AI assistants like Claude"
 readme = "README.md"
 license = { text = "MIT" }
