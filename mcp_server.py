@@ -36,7 +36,7 @@ class SleeponClient:
 
     def __init__(self):
         self.base_url: str = os.getenv(
-            "SLEEPON_API_BASE_URL", "https://sleep3-dev.sleepon.us/v1/api"
+            "SLEEPON_API_BASE_URL", "https://sleepon-api.sleepon.us/v1/api"
         )
         self._username: str = os.getenv("SLEEPON_USERNAME", "")
         self._password: str = os.getenv("SLEEPON_PASSWORD", "")
