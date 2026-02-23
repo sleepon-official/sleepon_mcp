@@ -17,7 +17,7 @@ mcp = FastMCP("Sleepon", dependencies=["httpx", "python-dotenv"])
 
 # Default headers required by the Sleepon backend on every request
 SLEEPON_DEFAULT_HEADERS = {
-    "Accept-Language": "zh_cn",
+    "Accept-Language": "en",
     "System-Name": "iOS",
     "Machine": "iPhone8,1",
     "System-Version": "14.4.1",
