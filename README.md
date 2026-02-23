@@ -28,10 +28,15 @@ pip install sleepon-mcp
 
 ### 2. Configure Claude Desktop
 
-Add the following to your Claude Desktop configuration file:
+To use this MCP server with Claude Desktop, you need to add it to your configuration file.
 
+**Step 1:** Open the configuration file based on your operating system:
 - **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
 - **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+
+*(Tip: You can quickly open this from Claude Desktop: Menu -> Settings -> Developer -> Edit Config)*
+
+**Step 2:** Add the `sleepon` server to the `mcpServers` object. Replace the email and password with your actual Sleepon account credentials.
 
 ```json
 {
@@ -48,9 +53,13 @@ Add the following to your Claude Desktop configuration file:
 }
 ```
 
+*Note: `uvx` is recommended as it automatically manages the Python environment for you. If you prefer to use your system Python, you can use `"command": "python", "args": ["-m", "sleepon_mcp.server"]` instead (assuming you ran `pip install sleepon-mcp`).*
+
 ### 3. Restart Claude Desktop
 
-After saving the config, restart Claude Desktop. You'll see the Sleepon tools available in the MCP tools menu (🔨 icon).
+1. Completely quit Claude Desktop (`Cmd+Q` on Mac, or right-click the system tray icon and exit on Windows).
+2. Re-open Claude Desktop.
+3. Look for the **hammer icon (🔨)** in the chat input area. Click on it to see the available Sleepon tools and prompts.
 
 ---
 
