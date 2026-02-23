@@ -53,7 +53,13 @@ To use this MCP server with Claude Desktop, you need to add it to your configura
 }
 ```
 
-*Note: `uvx` is recommended as it automatically manages the Python environment for you. If you prefer to use your system Python, you can use `"command": "python", "args": ["-m", "sleepon_mcp.server"]` instead (assuming you ran `pip install sleepon-mcp`).*
+*Note: `uvx` is recommended as it automatically manages the Python environment for you. If you prefer to use your system Python, you can use `"command": "python", "args": ["-m", "sleepon_mcp.server"]` instead.*
+
+> ⚠️ **Troubleshooting: `spawn uvx ENOENT` Error**
+> If Claude Desktop shows an `ENOENT` error, it means it cannot find the `uvx` command in its system path. To fix this, you must provide the **absolute path** to `uvx`.
+> 1. Open your terminal and run `which uvx` (Mac/Linux) or `where uvx` (Windows).
+> 2. Copy the resulting path (e.g., `/Users/username/.pyenv/shims/uvx` or `C:\\Users\\username\\.cargo\\bin\\uvx.exe`).
+> 3. Replace `"uvx"` in the `"command"` field of the config with this absolute path.
 
 ### 3. Restart Claude Desktop
 
